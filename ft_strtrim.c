@@ -6,15 +6,15 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/01 11:54:36 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 17:51:40 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:13:07 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_ischarset(char c, char const *charset)
+static int	ft_ischarset(char c, char const *charset)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (charset[i])
@@ -26,7 +26,7 @@ static int		ft_ischarset(char c, char const *charset)
 	return (0);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char			*result;
 	unsigned int	start;
@@ -41,7 +41,10 @@ char			*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while (end && ft_ischarset(s1[end], set))
 		end--;
-	result_len = (int)(end - start + 1) >= 0 ? end - start + 1 : 0;
+	if ((int)(end - start + 1) >= 0)
+		result_len = end - start + 1;
+	else
+		result_len = 0;
 	result = ft_substr(s1, start, result_len);
 	return (result);
 }

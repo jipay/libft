@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 19:36:17 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/10 15:28:01 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 09:38:37 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isspace(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' ||
-	c == '\r')
+	if (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f'
+		|| c == '\r')
 		return (1);
 	else
 		return (0);
@@ -23,13 +23,13 @@ int	ft_isspace(char c)
 
 int	ft_atoi(const char *nptr)
 {
-	int minus;
-	int result;
+	int	minus;
+	int	result;
 
 	minus = 1;
 	result = 0;
-	if (!(ft_isdigit(*nptr) || *nptr == '-' || *nptr == '+' ||
-	ft_isspace(*nptr)))
+	if (!(ft_isdigit(*nptr) || *nptr == '-' || *nptr == '+'
+			|| ft_isspace(*nptr)))
 		return (0);
 	else
 	{

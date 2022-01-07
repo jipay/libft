@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/04 11:12:48 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 15:27:22 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:22:18 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (*tmp == (unsigned char)c)
-			return ((void*)tmp);
+			return ((void *)tmp);
 		i++;
 		tmp++;
 	}

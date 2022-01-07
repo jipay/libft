@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 14:37:15 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/10 10:46:13 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:14:46 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t srclen;
+	size_t	srclen;
 
 	srclen = ft_strlen(src);
 	if (srclen + 1 < size)

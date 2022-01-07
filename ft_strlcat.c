@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 17:40:39 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/09 21:16:46 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:15:03 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t i;
-	size_t dst_len;
-	size_t src_len;
+	size_t	i;
+	size_t	dst_len;
+	size_t	src_len;
 
 	i = 0;
 	dst_len = ft_strlen(dst);

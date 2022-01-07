@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 23:38:26 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/05 10:52:18 by jdidier          ###   ########.fr       */
+/*   Created: 2020/11/19 11:44:51 by jdidier           #+#    #+#             */
+/*   Updated: 2021/11/16 23:38:01 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strndup(const char *s, size_t n)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	else
-		return (0);
+	char			*result;
+	unsigned int	i;
+
+	i = 0;
+	result = malloc(sizeof(*result) * (n + 1));
+	if (!result)
+		return (NULL);
+	while (s[i] && i < n)
+	{
+		result[i] = s[i];
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }

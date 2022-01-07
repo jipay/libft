@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 16:27:05 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/08 16:37:13 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:21:31 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int nb;
+	long int	nb;
 
 	nb = n;
 	if (nb < 0)

@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 23:38:26 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/05 10:52:18 by jdidier          ###   ########.fr       */
+/*   Created: 2021/01/09 10:27:06 by jdidier           #+#    #+#             */
+/*   Updated: 2021/10/14 10:19:25 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isprint(int c)
+int	ft_strcmp(char *s1, char *s2)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	else
-		return (0);
+	int	i;
+
+	i = 0;
+	while (s1[i] || s2[i])
+	{
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1[i] - s2[i]);
+	}
+	return (s1[i] - s2[i]);
 }

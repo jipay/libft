@@ -6,18 +6,25 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/03 12:20:16 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 21:28:21 by jdidier          ###   ########.fr       */
+/*   Updated: 2022/01/07 23:13:56 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4096
+# endif
+
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -40,6 +47,7 @@ int				ft_toupper(int c);
 int				ft_tolower(int c);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
+int				ft_strcmp(char *s1, char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
@@ -47,6 +55,7 @@ char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_atoi(const char *nptr);
 void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *s1);
+char			*ft_strndup(const char *s, size_t n);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
@@ -66,6 +75,8 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
-				void (*del)(void *));
+					void (*del)(void *));
+int				ft_malloc(void *target, size_t size);
+t_list			*ft_lstdeln(t_list **lst, void (*del)(void*), size_t n);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 00:17:24 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/04 18:27:38 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:19:40 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s || !c)
 	{
 		if (*s == c)
-			return ((char*)s);
+			return ((char *)s);
 		s++;
 	}
 	return (0);

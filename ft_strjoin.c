@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/06 17:21:25 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 17:50:55 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:18:40 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	i;
 
 	i = 0;
-	if (!(result = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+	result = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!result)
 		return (NULL);
 	while (*s1)
 	{

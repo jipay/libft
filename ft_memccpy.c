@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/04 11:47:30 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 15:26:09 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:22:03 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned char	tmpc;
 
 	i = 0;
-	tmpdest = (unsigned char*)dest;
-	tmpsrc = (unsigned char*)src;
+	tmpdest = (unsigned char *)dest;
+	tmpsrc = (unsigned char *)src;
 	tmpc = (unsigned char)c;
 	while (i < n)
 	{

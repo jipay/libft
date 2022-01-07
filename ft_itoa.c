@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/01 15:20:39 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 17:49:21 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:26:34 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	ft_recursive(int n, char *result, int *i)
 {
-	long int nbl;
+	long int	nbl;
 
 	nbl = n;
 	if (nbl < 0)
@@ -35,7 +35,7 @@ static void	ft_recursive(int n, char *result, int *i)
 	}
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		counter;
 	int		nb;
@@ -53,7 +53,8 @@ char		*ft_itoa(int n)
 		nb /= 10;
 		counter++;
 	}
-	if (!(result = malloc(sizeof(*result) * (counter + 1))))
+	result = malloc(sizeof(*result) * (counter + 1));
+	if (!result)
 		return (NULL);
 	counter = 0;
 	ft_recursive(n, result, &counter);

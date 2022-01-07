@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/12 19:02:50 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 20:34:46 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:25:05 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst)

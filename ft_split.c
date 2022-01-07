@@ -6,16 +6,16 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 10:35:38 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 17:50:13 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 10:21:09 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_wordscounter(char const *s, char c)
+static int	ft_wordscounter(char const *s, char c)
 {
-	int flag;
-	int result;
+	int	flag;
+	int	result;
 
 	flag = 0;
 	result = 0;
@@ -33,7 +33,7 @@ static int		ft_wordscounter(char const *s, char c)
 	return (result);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char			**result;
 	unsigned int	start;
@@ -43,7 +43,8 @@ char			**ft_split(char const *s, char c)
 	start = 0;
 	index = 0;
 	i = 0;
-	if (!(result = malloc(sizeof(char*) * (ft_wordscounter(s, c) + 1))))
+	result = malloc(sizeof(char *) * (ft_wordscounter(s, c) + 1));
+	if (!result)
 		return (NULL);
 	while (s[index])
 	{

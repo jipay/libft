@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/28 08:59:09 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/12 12:31:07 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/11/14 16:46:25 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*tmp;
 	int		index;
 
-	tmp = (char*)s;
+	tmp = (char *)s;
 	index = (int)ft_strlen(s);
 	tmp += index;
 	while (index >= 0 && *tmp != c)

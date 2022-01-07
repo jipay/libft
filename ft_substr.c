@@ -6,7 +6,7 @@
 /*   By: jdidier <jdidier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/30 14:37:51 by jdidier           #+#    #+#             */
-/*   Updated: 2020/05/13 11:55:33 by jdidier          ###   ########.fr       */
+/*   Updated: 2021/10/14 09:40:33 by jdidier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (ft_strlen(s) <= start)
 		len = 0;
-	if (!(result = malloc(sizeof(*result) * (len + 1))))
+	result = malloc(sizeof(*result) * (len + 1));
+	if (!result)
 		return (NULL);
 	while (i < len && s[i])
 	{
